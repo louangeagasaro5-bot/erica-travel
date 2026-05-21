@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Erica Travels Destinations</title>
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#f5f5f5;
+    font-family:'Poppins', sans-serif;
+}
+
+/* NAVBAR */
+
+header{
+    width:100%;
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:700;
+    font-family:'Cinzel', serif;
+}
+
+nav{
+    display:flex;
+    gap:40px;
+}
+
+nav a{
+    text-decoration:none;
+    color:black;
+    font-size:18px;
+}
+
+.social-icons{
+    display:flex;
+    gap:20px;
+    font-size:24px;
+}
+
+.fa-pinterest-p{
+    color:#d64161;
+}
+
+/* TITLE */
+
+.title-section{
+    text-align:center;
+    padding:50px 20px 20px;
+}
+
+.title-section h1{
+    font-size:80px;
+    font-weight:400;
+    font-family:'Times New Roman', serif;
+}
+
+.title-section p{
+    margin-top:20px;
+    font-size:28px;
+    font-weight:500;
+}
+
+/* CARDS */
+
+.cards-container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    gap:60px;
+    flex-wrap:wrap;
+    padding:40px;
+}
+
+.card-link{
+    text-decoration:none;
+    color:black;
+}
+
+.card{
+    width:300px;
+    background:#d9d9d9;
+    border-radius:35px;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:18px;
+}
+
+.card-content h2{
+    font-size:26px;
+    margin-bottom:10px;
+}
+
+.card-content p{
+    font-size:18px;
+    line-height:1.4;
+}
+
+.card-content a{
+    display:inline-block;
+    margin-top:20px;
+    text-decoration:none;
+    color:#1976d2;
+    font-size:22px;
+}
+
+/* SUBSCRIBE */
+
+.subscribe{
+    background:#a9c2e2;
+    padding:30px 40px 50px;
+}
+
+.subscribe h2{
+    font-family:'Cinzel', serif;
+    font-size:28px;
+    margin-bottom:30px;
+}
+
+.subscribe-box{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.mail-icon{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:#5c8ec7;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:50px;
+    color:white;
+}
+
+.subscribe-box input{
+    width:450px;
+    padding:18px;
+    border:none;
+    border-radius:10px;
+    font-size:20px;
+}
+
+.subscribe-box button{
+    padding:16px 60px;
+    border:none;
+    border-radius:10px;
+    background:#3554d1;
+    color:black;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+    background:#0d4b86;
+    color:black;
+    display:flex;
+    justify-content:space-between;
+    padding:40px;
+    flex-wrap:wrap;
+}
+
+.footer-logo h1{
+    font-size:40px;
+    font-family:'Cinzel', serif;
+}
+
+.footer-logo p{
+    font-size:24px;
+    margin-top:10px;
+}
+
+.quick-links{
+    display:flex;
+    flex-direction:column;
+}
+
+.quick-links h2{
+    margin-bottom:10px;
+    font-size:38px;
+    font-family:'Cinzel', serif;
+}
+
+.quick-links a{
+    text-decoration:none;
+    color:black;
+    font-size:22px;
+    margin:4px 0;
+}
+
+.footer-social h2{
+    font-size:38px;
+    margin-bottom:20px;
+    font-family:'Cinzel', serif;
+}
+
+.footer-icons{
+    display:flex;
+    gap:25px;
+    font-size:38px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+    header{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .title-section h1{
+        font-size:55px;
+    }
+
+    .subscribe-box{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .subscribe-box input{
+        width:100%;
+    }
+
+    footer{
+        gap:40px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header>
+
+<div class="logo">
+ERICA TRAVELS <i class="fa-solid fa-plane"></i>
+</div>
+
+<nav>
+<a href="index.html">home</a>
+<a href="destination.html">destination</a>
+<a href="blog.html">blog</a>
+<a href="#">gallery</a>
+<a href="#">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<div class="social-icons">
+<i class="fa-brands fa-instagram"></i>
+<i class="fa-brands fa-youtube"></i>
+<i class="fa-brands fa-pinterest-p"></i>
+</div>
+
+</header>
+
+<!-- TITLE -->
+
+<section class="title-section">
+
+<h1>Destinations</h1>
+
+<p>
+Explore amazing place around the world
+</p>
+
+</section>
+
+<!-- DESTINATION CARDS -->
+
+<section class="cards-container">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+<h2>Paris, France</h2>
+
+<p>
+The city of lights,
+Arts, and Romance
+</p>
+
+<a href="#">Explore ➜</a>
+
+</div>
+</div>
+
+<!-- HONG KONG CLICKABLE CARD -->
+
+<a href="hongkong.html" class="card-link">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+
+<h2>Hong Kong</h2>
+
+<p>
+Modern city with breathtaking views and rich culture
+</p>
+
+<a href="hongkong.html">Explore ➜</a>
+
+</div>
+
+</div>
+
+</a>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+<h2>Rome, Italy</h2>
+
+<p>
+discover ancient history,
+beautiful architecture and local culture
+</p>
+
+<a href="#">Explore ➜</a>
+
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1543783207-ec64e4d95325?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+<h2>Madrid, Spain</h2>
+
+<p>
+Vibrant streets,
+amazing food and warm people
+</p>
+
+<a href="#">Explore ➜</a>
+
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1513326738677-b964603b136d?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+<h2>Moscow, Russia</h2>
+
+<p>
+Historic landscapes and Fascinating culture
+</p>
+
+<a href="#">Explore ➜</a>
+
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg">
+
+<div class="card-content">
+<h2>New Zealand</h2>
+
+<p>
+Breathtaking landscapes and unforgettable adventures
+</p>
+
+<a href="#">Explore ➜</a>
+
+</div>
+</div>
+
+</section>
+
+<!-- SUBSCRIBE -->
+
+<section class="subscribe">
+
+<h2>Subscribe to my new latter</h2>
+
+<div class="subscribe-box">
+
+<div class="mail-icon">
+<i class="fa-regular fa-envelope"></i>
+</div>
+
+<input type="email" placeholder="enter your email">
+
+<button>subscribe</button>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-logo">
+
+<h1>ERICA TRAVELS</h1>
+
+<p>Travel, Explore ,Inspire</p>
+
+</div>
+
+<div class="quick-links">
+
+<h2>Quick link</h2>
+
+<a href="index.html">home</a>
+<a href="destination.html">destination</a>
+<a href="blog.html">blog</a>
+<a href="#">About</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+<div class="footer-social">
+
+<h2>Follow Me</h2>
+
+<div class="footer-icons">
+
+<i class="fa-brands fa-instagram"></i>
+<i class="fa-brands fa-youtube"></i>
+<i class="fa-brands fa-pinterest-p"></i>
+<i class="fa-regular fa-envelope"></i>
+
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>
