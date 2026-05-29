@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog - Erica Travels</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 32px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            font-weight: 500;
+            margin-left: 35px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            font-size: 24px;
+        }
+
+        .page-title {
+            font-family: 'Cinzel', serif;
+            font-size: 62px;
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: white;
+        }
+
+        .main-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px 40px 80px;
+            display: flex;
+            gap: 50px;
+        }
+
+        .feed-column { flex: 1; }
+        .sidebar-column { width: 420px; flex-shrink: 0; }
+
+        .feed-card {
+            background: white;
+            border-radius: 30px;
+            overflow: hidden;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .feed-card:hover { transform: translateY(-8px); }
+
+        .card-image {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+        }
+
+        .card-body { padding: 40px; }
+
+        .card-title {
+            font-family: 'Cinzel', serif;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .card-excerpt {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .action-link {
+            color: #1976d2;
+            text-decoration: none;
+            font-size: 19px;
+            font-weight: 500;
+        }
+
+        .sidebar-box {
+            background: #f0f0f0;
+            border-radius: 40px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 16px 22px;
+            border: none;
+            border-radius: 50px;
+            font-size: 17px;
+        }
+
+        .category-link {
+            display: block;
+            padding: 10px 0;
+            font-size: 18px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .recent-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 22px;
+        }
+
+        .recent-thumb {
+            width: 110px;
+            height: 75px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        footer{
+    background:#0d4b86;
+    color:white;
+    padding:70px 50px;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:50px;
+}
+
+        .footer-logo h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 16px;
+        }
+
+        .footer-logo p {
+            font-size: 16px;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+
+        .quick-links h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .quick-links a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin: 8px 0;
+            font-size: 16px;
+        }
+
+        .footer-icons {
+            display: flex;
+            gap: 25px;
+            font-size: 32px;
+        }
+
+        @media (max-width: 1100px) {
+            .main-content { flex-direction: column; }
+            .sidebar-column { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">ERICA TRAVELS ✈️</div>
+        <nav>
+            <a href="index.html">home</a>
+            <a href="destination.html">destination</a>
+            <a href="blog.html">blog</a>
+            <a href="gallery.html">gallery</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="social-icons">
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-pinterest-p"></i>
+        </div>
+    </header>
+
+    <div class="page-title">Travel Blog</div>
+
+    <div class="main-content">
+
+        <!-- Blog Feed -->
+        <div class="feed-column">
+
+            <div class="feed-card">
+                <img src="https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?q=80&w=2070&auto=format&fit=crop" class="card-image" alt="Maldives">
+                <div class="card-body">
+                    <h2 class="card-title">Maldives: paradise on earth</h2>
+                    <p class="card-excerpt">The Maldives is a breathtaking paradise where crystal-clear turquoise waters meet soft white sandy beaches, creating a peaceful escape from everyday life.</p>
+                    <a href="#" class="action-link">Read More →</a>
+                </div>
+            </div>
+
+            <div class="feed-card">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4" class="card-image" alt="Swiss Alps">
+                <div class="card-body">
+                    <h2 class="card-title">Hiking the Swiss Alps</h2>
+                    <p class="card-excerpt">The most beautiful hike you have ever done in Switzerland. Breathtaking mountain views and unforgettable trails.</p>
+                    <a href="#" class="action-link">Read More →</a>
+                </div>
+            </div>
+
+            <div class="feed-card">
+                <img src="https://images.pexels.com/photos/402028/pexels-photo-402028.jpeg" class="card-image" alt="Kyoto Japan"
+                <div class="card-body">
+                    <h2 class="card-title">A guide to Kyoto, Japan</h2>
+                    <p class="card-excerpt">Best places to visit, where to eat, and essential tips for first-time travellers in the ancient capital.</p>
+                    <a href="#" class="action-link">Read More →</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar-column">
+
+            <div class="sidebar-box">
+                <input type="text" class="search-input" placeholder="Search blog...">
+            </div>
+
+            <div class="sidebar-box">
+                <h2>Categories</h2>
+                <a href="#" class="category-link">All</a>
+                <a href="#" class="category-link">Asia</a>
+                <a href="#" class="category-link">Europe</a>
+                <a href="#" class="category-link">Food</a>
+                <a href="#" class="category-link">Tips</a>
+                <a href="#" class="category-link">Adventure</a>
+            </div>
+
+            <div class="sidebar-box">
+                <h2>Recent Posts</h2>
+                
+                <div class="recent-row">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" class="recent-thumb" alt="Caribbean Beach">
+                    <div class="recent-meta-title">The Caribbean’s Most Beautiful Beaches</div>
+                </div>
+
+                <div class="recent-row">
+                    <img src="https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg" class="recent-thumb" alt="Barbados Sunset">
+                    <div class="recent-meta-title">Barbados Sunset Vibes</div>
+                </div>
+
+                <div class="recent-row">
+                    <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=1200&auto=format&fit=crop" class="recent-thumb" alt="Rodeo Drive">
+                    <div class="recent-meta-title">Rodeo Drive in Beverly Hills</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">
+            <h1>ERICA TRAVELS</h1>
+            <p>Travel, Explore, Inspire</p>
+        </div>
+
+        <div class="quick-links">
+            <h2>Quick Link</h2>
+            <a href="index.html">Home</a>
+            <a href="destination.html">Destination</a>
+            <a href="#">Blog</a>
+            <a href="#">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div>
+            <h2>Follow Me</h2>
+            <div class="footer-icons">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-pinterest-p"></i>
+                <i class="fas fa-envelope"></i>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

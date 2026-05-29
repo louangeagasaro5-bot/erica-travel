@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Erica Travels Gallery</title>
+
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+    color:#222;
+}
+
+/* HEADER (MATCH CONTACT PAGE STYLE) */
+
+header{
+    width:100%;
+    background:white;
+    padding:22px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 20px rgba(0,0,0,0.05);
+}
+
+.logo{
+    font-family:'Cinzel', serif;
+    font-size:32px;
+    font-weight:700;
+}
+
+nav{
+    display:flex;
+    gap:35px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#222;
+    font-size:17px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#1976d2;
+}
+
+.social-icons{
+    display:flex;
+    gap:20px;
+    font-size:23px;
+}
+
+.social-icons i{
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.social-icons i:hover{
+    transform:translateY(-4px);
+    color:#1976d2;
+}
+
+/* HERO */
+
+.hero{
+    height:60vh;
+    background:url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1600&auto=format&fit=crop') center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    position:relative;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.45);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+/* GALLERY SECTION */
+
+.gallery{
+    padding:80px 8%;
+}
+
+.gallery-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.gallery-title h2{
+    font-size:42px;
+}
+
+.gallery-title p{
+    color:#666;
+    margin-top:10px;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
+    gap:25px;
+}
+
+.gallery-item{
+    overflow:hidden;
+    border-radius:20px;
+    position:relative;
+    cursor:pointer;
+}
+
+.gallery-item img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    transition:0.5s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.1);
+}
+
+.overlay{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    background:linear-gradient(transparent, rgba(0,0,0,0.8));
+    color:white;
+    padding:20px;
+}
+
+.overlay h3{
+    font-size:24px;
+}
+.video-section{
+    text-align: center;
+    padding: 70px 20px;
+    background: #f5f5f5;
+}
+
+.video-section h2{
+    font-size: 40px;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+.video-section video{
+    width: 85%;
+    max-width: 1000px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    object-fit: cover;
+}
+/* FOOTER (MATCH CONTACT PAGE STYLE) */
+
+footer{
+    background:#0d4b86;
+    color:white;
+    padding:70px 50px;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:50px;
+}
+.footer-logo h1{
+    font-size:42px;
+    font-family:'Cinzel', serif;
+}
+.quick-links h2{
+    font-family:'Cinzel', serif;
+    font-size:34px;
+    margin-bottom:18px;
+    font-size:16px
+}
+
+.quick-links a{
+    display:block;
+    text-decoration:none;
+    color:white;
+    margin:8px 0;
+    font-size:18px;
+    transition:0.3s;
+    font-size:16px
+}
+
+.quick-links a:hover{
+    color:#90caf9;
+}
+
+.footer-icons{
+    display:flex;
+    gap:22px;
+    font-size:32px;
+    margin-top:20px;
+    font-size:26px;
+}
+
+.footer-icons i{
+    cursor:pointer;
+    transition:0.3s;
+    font-size:26px;
+}
+
+.footer-icons i:hover{
+    color:#90caf9;
+    transform:translateY(-4px);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1100px){
+
+    header{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    footer{
+        flex-direction:column;
+        gap:40px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">
+ERICA TRAVELS ✈️
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="destination.html">Destinations</a>
+<a href="gallery.html">Gallery</a>
+<a href="blog.html">Travel Blog</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<div class="social-icons">
+<i class="fab fa-instagram"></i>
+<i class="fab fa-youtube"></i>
+<i class="fab fa-pinterest-p"></i>
+</div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Travel Gallery</h1>
+        <p>Explore beautiful destinations around the world</p>
+    </div>
+</section>
+
+<!-- GALLERY (UNCHANGED CONTENT) -->
+
+<section class="gallery">
+
+    <div class="gallery-title">
+        <h2>Our Best Moments</h2>
+        <p>Memories captured from amazing destinations</p>
+    </div>
+
+    <div class="gallery-grid">
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop">
+            <div class="overlay"><h3>Maldives</h3></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98?q=80&w=1200&auto=format&fit=crop">
+            <div class="overlay"><h3>Paris</h3></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2?q=80&w=1200&auto=format&fit=crop">
+            <div class="overlay"><h3>Dubai</h3></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop">
+            <div class="overlay"><h3>Bali</h3></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1200&auto=format&fit=crop">
+            <div class="overlay"><h3>Hong Kong</h3></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop">
+            <div class="overlay"><h3>Switzerland</h3></div>
+        </div>
+
+    </div>
+<section class="video-section">
+
+    <h2>Explore The Bahamas</h2>
+
+    <video autoplay muted loop playsinline>
+        <source src="videos/bahamas.mp4" type="video/mp4">
+    </video>
+
+</section>
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-logo">
+<h1>ERICA TRAVELS</h1>
+<p>Travel,
+     Explore,
+      Inspire</p>
+</div>
+
+<div class="quick-links">
+<h2>Quick Link</h2>
+<a href="index.html">Home</a>
+<a href="destination.html">Destination</a>
+<a href="blog.html">Blog</a>
+<a href="contact.html">Contact</a>
+</div>
+
+<div>
+<h2>Follow Me</h2>
+<div class="footer-icons">
+<i class="fab fa-instagram"></i>
+<i class="fab fa-youtube"></i>
+<i class="fab fa-pinterest-p"></i>
+<i class="fas fa-envelope"></i>
+</div>
+</div>
+
+</footer>
+
+</body>
+</html

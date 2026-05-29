@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Erica Travels</title>
+
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+    color:#333;
+}
+
+/* HEADER */
+
+header{
+    width:100%;
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:700;
+    font-family:'Cinzel', serif;
+}
+
+nav{
+    display:flex;
+    gap:35px;
+}
+
+nav a{
+    text-decoration:none;
+    color:black;
+    font-size:18px;
+}
+
+.social-icons{
+    display:flex;
+    gap:20px;
+    font-size:24px;
+}
+
+.fa-pinterest-p{
+    color:#d64161;
+}
+
+/* HERO SECTION */
+
+.hero{
+    height:60vh;
+    background:url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1600&auto=format&fit=crop') center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    position:relative;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.55);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+/* ABOUT SECTION */
+
+.about{
+    padding:80px 8%;
+    display:flex;
+    gap:50px;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.about-image{
+    flex:1;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:20px;
+}
+
+.about-text{
+    flex:1;
+}
+
+.about-text h2{
+    font-size:45px;
+    margin-bottom:20px;
+    color:#0097a7;
+}
+
+.about-text p{
+    line-height:1.8;
+    margin-bottom:20px;
+    font-size:17px;
+}
+
+/* SERVICES */
+
+.services{
+    padding:80px 8%;
+    background:white;
+}
+
+.services-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.services-title h2{
+    font-size:42px;
+    color:#222;
+}
+
+.service-boxes{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    gap:30px;
+}
+
+.service{
+    background:#f5f7fa;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    transition:0.4s;
+}
+
+.service:hover{
+    transform:translateY(-10px);
+}
+
+.service h3{
+    margin-bottom:15px;
+    color:#0097a7;
+}
+
+/* TEAM SECTION */
+
+.team{
+    padding:80px 8%;
+}
+
+.team-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.team-title h2{
+    font-size:42px;
+}
+
+.team-members{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    gap:30px;
+}
+
+.member{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.member img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:20px;
+}
+
+.member h3{
+    margin-bottom:10px;
+    color:#0097a7;
+}
+
+/* FOOTER */
+
+footer{
+    background:#0d4b86;
+    color:white;
+    padding:70px 50px;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:50px;
+}
+
+.footer-logo h1{
+    font-size:16px;
+    font-family:'Cinzel', serif;
+}
+
+.footer-logo p{
+    font-size:16px;
+    margin-top:10px;
+}
+
+.quick-links{
+    display:flex;
+    flex-direction:column;
+}
+
+.quick-links h2{
+    font-size:16px;
+    margin-bottom:10px;
+    font-family:'Cinzel', serif;
+}
+
+.quick-links a{
+    text-decoration:none;
+    color:black;
+    font-size:16px;
+    margin:4px 0;
+}
+
+.footer-social h2{
+    font-size:38px;
+    margin-bottom:20px;
+    font-family:'Cinzel', serif;
+}
+
+.footer-icons{
+    display:flex;
+    gap:25px;
+    font-size:38px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1100px){
+
+    header{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:50px;
+    }
+
+    .about{
+        flex-direction:column;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+<div class="logo">
+ERICA TRAVELS <i class="fa-solid fa-plane"></i>
+</div>
+
+<nav>
+<a href="index.html">home</a>
+<a href="destination.html">destination</a>
+<a href="gallery.html">gallery</a>
+<a href="about.html">about</a>
+<a href="contact.html">contact</a>
+</nav>
+
+<div class="social-icons">
+<i class="fa-brands fa-instagram"></i>
+<i class="fa-brands fa-youtube"></i>
+<i class="fa-brands fa-pinterest-p"></i>
+</div>
+
+</header>
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>About Erica Travels</h1>
+        <p>Your trusted partner for unforgettable adventures</p>
+    </div>
+</section>
+
+<!-- ABOUT SECTION -->
+
+<section class="about">
+
+    <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?q=80&w=1200&auto=format&fit=crop">
+    </div>
+
+    <div class="about-text">
+        <h2>Who We Are</h2>
+
+        <p>
+            Erica Travels is a modern travel company dedicated to helping people
+            explore the world through exciting and unforgettable travel experiences.
+            We connect travelers with beautiful destinations, travel inspiration,
+            and guided adventures across the globe.
+        </p>
+
+        <p>
+            Our mission is to make travel easy, affordable, and enjoyable for everyone.
+            Whether you dream of relaxing beaches, luxury cities, mountain adventures,
+            or cultural experiences, Erica Travels helps you discover the perfect journey.
+        </p>
+
+        <p>
+            We believe travel creates memories that last forever and brings people closer
+            to different cultures and experiences around the world.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section class="services">
+
+    <div class="services-title">
+        <h2>What We Do</h2>
+    </div>
+
+    <div class="service-boxes">
+
+        <div class="service">
+            <h3>Travel Planning</h3>
+            <p>We help travelers plan amazing vacations and adventures worldwide.</p>
+        </div>
+
+        <div class="service">
+            <h3>Destination Guides</h3>
+            <p>Discover the best attractions, hotels, and activities in every destination.</p>
+        </div>
+
+        <div class="service">
+            <h3>Tour Packages</h3>
+            <p>Enjoy affordable and luxury travel packages designed for every traveler.</p>
+        </div>
+
+        <div class="service">
+            <h3>Travel Support</h3>
+            <p>Our team provides support and travel assistance for smooth journeys.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- TEAM -->
+
+<section class="team">
+
+    <div class="team-title">
+        <h2>Meet Our Team</h2>
+    </div>
+
+    <div class="team-members">
+
+        <div class="member">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg">
+            <h3>Erica Johnson</h3>
+            <p>Founder & CEO</p>
+        </div>
+
+        <div class="member">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg">
+            <h3>Daniel Smith</h3>
+            <p>Travel Consultant</p>
+        </div>
+
+        <div class="member">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg">
+            <h3>Sophia Lee</h3>
+            <p>Destination Specialist</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-logo">
+<h1>ERICA TRAVELS</h1>
+<p>Travel, Explore, Inspire</p>
+</div>
+
+<div class="quick-links">
+
+<h2>Quick Links</h2>
+
+<a href="index.html">home</a>
+<a href="destination.html">destination</a>
+<a href="gallery.html">gallery</a>
+<a href="about.html">about</a>
+<a href="contact.html">contact</a>
+
+</div>
+
+<div class="footer-social">
+
+<h2>Follow Us</h2>
+
+<div class="footer-icons">
+
+<i class="fa-brands fa-instagram"></i>
+<i class="fa-brands fa-youtube"></i>
+<i class="fa-brands fa-pinterest-p"></i>
+<i class="fa-regular fa-envelope"></i>
+
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>
